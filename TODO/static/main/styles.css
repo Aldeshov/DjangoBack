@@ -1,0 +1,106 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+#add {
+    background-color: #157FFB;
+    border: 1px solid #1670DA;
+    color: #FCFBFF;
+    margin-bottom: 25px;
+}
+
+#add:hover {
+    background-color: #1665C2;
+}
+
+#view {
+    background-color: #FDC02F;
+    border: 1px solid #F2B526;
+    color: #061210;
+}
+
+#view:hover {
+    background-color: #EAAF27;
+}
+
+#delete {
+    background-color: #D63647;
+    border: 1px solid #C73E4D;
+    color: #FDF8F9;
+}
+
+#delete:hover {
+    background-color: #B12C3B;
+}
+
+#mark {
+    background-color: #229AAE;
+    border: 1px solid #248393;
+    color: #FAFCFB;
+}
+
+#mark:hover {
+    background-color: #277A88;
+}
+
+header {
+    background-color: #202327;
+    color: white;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+}
+
+span {
+    padding-left: 25px;
+    font-weight: bolder;
+}
+
+#parent_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    min-width: 75%;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+tr {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr.line td, .line{
+    border-top: 1px solid #d9d9d9;
+    padding-top: 10px;
+}

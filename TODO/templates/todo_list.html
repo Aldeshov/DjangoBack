@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+        <title>TODO</title>
+    </head>
+    <body>
+        <header>
+            <span>BFDjango TODO</span>
+        </header>
+        <div id="parent_content">
+            <div id="content">
+                <div>
+                    <button id="add">Add Task</button>
+                </div>
+                <div class="line">
+                    <h1>Tasks in "List1"</h1>
+                </div>
+                <table>
+                        <tr class="line sp" style="font-weight: bolder">
+                           <td>Task</td>
+                           <td>Created</td>
+                           <td>Due on</td>
+                           <td>Owner</td>
+                           <td>Mark</td>
+                        </tr>
+                        {% for task in data %}
+                            {% if not task.Mark %}
+                                <tr class="line sp">
+                                    <td style="color: #0A7EFB"> {{ task.Task }}</td>
+                                    <td> {{ task.Created }}</td>
+                                    <td> {{ task.Due_on }}</td>
+                                    <td> {{ task.Owner }}</td>
+                                    <td> <button id="mark">Done</button> </td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </table>
+                <div>
+                    <button id="view">View completed tasks</button>
+                    <button id="delete">Delete this List</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
