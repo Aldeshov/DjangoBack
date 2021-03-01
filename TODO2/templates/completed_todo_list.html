@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+        <script src="{% static 'main/script.js' %}"></script>
+        <noscript>JavaScript not Enabled</noscript>
+        <title>TODO</title>
+    </head>
+    <body>
+        <header>
+            <span>BFDjango TODO</span>
+        </header>
+        <div id="parent_content">
+            <div id="content">
+                <div>
+                    <button id="add">Add Task</button>
+                </div>
+                <div class="line">
+                    <h1>Completed tasks in "{{ list.name }}"</h1>
+                </div>
+                <table>
+                        <tr class="line" style="font-weight: bolder">
+                           <td>Task</td>
+                           <td>Created</td>
+                           <td>Due on</td>
+                           <td>Owner</td>
+                           <td>Mark</td>
+                        </tr>
+                        {% for task in tasks %}
+                            {% if task.mark %}
+                                <tr class="line">
+                                    <td style="color: #0A7EFB"> {{ task.task }}</td>
+                                    <td> {{ task.created }}</td>
+                                    <td> {{ task.due_on }}</td>
+                                    <td> {{ task.owner }}</td>
+                                    <td> <button id="mark">Not Done</button> </td>
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </table>
+                <div>
+                    <button id="view" onclick="view_incomplete()">
+                        View incomplete tasks
+                    </button>
+                    <button id="delete">Delete this list</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
