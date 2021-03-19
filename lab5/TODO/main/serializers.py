@@ -7,7 +7,7 @@ from main.models import List, Task, Person
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Person
-        fields = ('first_name', 'last_name', 'email', )
+        fields = ('first_name', 'last_name', )
 
 
 class ListSerializer(serializers.ModelSerializer):

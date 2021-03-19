@@ -3,7 +3,7 @@ from main.models import *
 
 
 admin.site.register(List)
-# admin.site.register(Task)
+admin.site.register(Person)
 
 
 @admin.register(Task)
